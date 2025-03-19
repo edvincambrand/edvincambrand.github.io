@@ -58,14 +58,17 @@ body {
 <h1>Simple Calculator</h1>
 
 <!-- Input fields for numbers -->
-<label for="num1">Ange sensetivitet:</label>
+<label for="num1">Ange sensetivitet (vanligtvis 0.90-0.95):</label>
 <input type="number" id="num1" required><br><br>
 
-<label for="num2">Ange specificitet:</label>
+<label for="num2">Ange specificitet: (vanligtvis 0.85-0.95) </label>
 <input type="number" id="num2" required><br><br>
 
+<label for="num3">Ange sjukdomsfrekvens (exempel: 0.2 motsvarar 20%)</label>
+<input type="number" id="s" required><br><br>
+
 <!-- Button to trigger calculation -->
-<button onclick="calculate()">Calculate Sum</button><br><br>
+<button onclick="calculate()">Beräkna sannolikhet att diagnos visar rätt.</button><br><br>
 
 <!-- Output display -->
 <p>Result: <span id="result">0</span></p>
@@ -75,12 +78,12 @@ function calculate() {
         // Get the values from the input fields
         const num1 = parseFloat(document.getElementById('num1').value);
         const num2 = parseFloat(document.getElementById('num2').value);
-
+        const s = parseFloat(document.getElementById("s").value);
         // Perform the calculation (in this case, addition)
-        const sum = num1 + num2;
+        const probability = s*num1/(s*num1+(1-s)*(1-num2));
 
         // Display the result
-        document.getElementById('result').innerText = sum;
+        document.getElementById('result').innerText = probability;
 }
 </script>
 
