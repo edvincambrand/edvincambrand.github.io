@@ -80,8 +80,8 @@ function calculate() {
         const num2 = parseFloat(document.getElementById('num2').value);
         const s = parseFloat(document.getElementById("s").value);
         // Perform the calculation (in this case, addition)
-        const probability = s*num1/(s*num1+(1-s)*(1-num2));
-
+        const calculation = s*num1/(s*num1+(1-s)*(1-num2));
+        const probability = (calculation).toFixed(1) + "%";
         // Display the result
         document.getElementById('result').innerText = probability;
 }
