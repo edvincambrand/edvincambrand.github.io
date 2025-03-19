@@ -55,7 +55,9 @@ body {
 <p> 	My name is edvin.	</p>
 <div>	And that's pretty much it.	</div>
 
-<h1>Simple Calculator</h1>
+<p> Kalkylatorn nedan är skapad för att beräkna vad sannolikheten är att ett djur faktiskt är sjukt, givet ett positivt resultat på ett prov.</p>
+
+<h1>Diagnostest - tillförlitlighet m.h.a. Bayes theorem</h1>
 
 <!-- Input fields for numbers -->
 <label for="num1">Ange sensetivitet (vanligtvis 0.90-0.95):</label>
@@ -71,7 +73,7 @@ body {
 <button onclick="calculate()">Beräkna sannolikhet att diagnos visar rätt.</button><br><br>
 
 <!-- Output display -->
-<p>Result: <span id="result">0</span></p>
+<p>Tillförlitlighet: <span id="result">0</span></p>
 
 <script>
 function calculate() {
@@ -81,7 +83,7 @@ function calculate() {
         const s = parseFloat(document.getElementById("s").value);
         // Perform the calculation (in this case, addition)
         const calculation = s*num1/(s*num1+(1-s)*(1-num2));
-        const probability = (calculation).toFixed(1) + "%";
+        const probability = (calculation*100).toFixed(2) + "%";
         // Display the result
         document.getElementById('result').innerText = probability;
 }
