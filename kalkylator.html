@@ -63,23 +63,16 @@ body {
 
 
 <!-- Button to trigger calculation -->
-<button onclick="calculate()">Klicka på mig!</button><br>
+<button onclick="display()">Klicka på mig!</button><br>
 
 <!-- Output display -->
 <p> Din BMI är: <span id="result">0</span></p>
 
 <script>
-function calculate() {
-        // Get the values from the input fields
-        const num1 = parseFloat(document.getElementById('num1').value)/100;
-        const num2 = parseFloat(document.getElementById('num2').value)/100;
-        const s = parseFloat(document.getElementById("s").value)/100;
-        // Perform the calculation (in this case, addition)
-        const calculation = s*num1/(s*num1+(1-s)*(1-num2));
-        const probability = (calculation*100).toFixed(2) + "%";
-        // Display the result
-        document.getElementById('result').innerText = "helt jävla perfekt";
-}
+    function display() {
+            // Display the result
+            document.getElementById('result').innerText = "helt jävla perfekt";
+    }
 </script>
 
 <div style="font-size:30; margin-bottom:70px; text-align: center;">
