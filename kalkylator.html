@@ -1,92 +1,91 @@
 
 <head> 
-    <title>
-            &#10086;BMI-kalkylator
-    </title>
-    <meta charset="UTF-8">
-    <meta name="description" content="Edvins yttrandefrihet">
-    <script type="text/javascript" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-    </head>
-    
-    <style>
-    
-    body {
-            background-color: #1b1b1b; /* Set background to gray */
-            color: white;
-            font-size: 24px;
-            margin: 0;
-            padding: 0;
-            }
-    
-            /* Style for left vertical line */
-    
-    .side-line {
-            position: fixed;
-            top: 0;               /* Start from the top of the page */
-            bottom: 0;            /* Extend to the bottom of the page */
-            width: 40px;          /* Line width */
-            background-color: #8447b6;
-            }
-    
-    .left-line {
-            left: 5;              /* Position on the left side */
-            }
-    .right-line {
-            right: 5;             /* Position on the right side */
-            }
-    
-    </style>
-    
-    <!-- Left and Right Green Lines -->
-    <div class="side-line left-line"></div>
-    <div class="side-line right-line"></div>
-    
-    <body style="margin-left: 70px; margin-right: 70px;">
-    
-    <div style="font-size:36px; margin-top:30px;">
-            <a href="https://edvincambrand.github.io" target="_blank">
-                    &#10087; </a>
-            <p style="text-align: center; font-size: 32px;"> 
-                    &#9888; This website it under heavy construction. &#9888; </p>
-    </div>
-    
-    <h2>Ange mätvärden för att beräkna din BMI</h2>
-    
-    <!-- Input fields for numbers -->
-    <label for="num1">Ange din längd i cm:</label>
-    <input type="number" id="num1" required><br><br>
-    
-    <label for="num2">Ange din vikt i kg:</label>
-    <input type="number" id="num2" required><br><br>
-    
+<title>
+        &#10086;BMI-kalkylator
+</title>
+<meta charset="UTF-8">
+<meta name="description" content="Edvins yttrandefrihet">
+<script type="text/javascript" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
 
-    <!-- Button to trigger calculation -->
-    <button onclick="calculate()">Klicka på mig!</button><br>
-    
-    <!-- Output display -->
-    <p> Din BMI är: <span id="result">0</span></p>
-    
-    <script>
-    function calculate() {
-            // Get the values from the input fields
-            const num1 = parseFloat(document.getElementById('num1').value)/100;
-            const num2 = parseFloat(document.getElementById('num2').value)/100;
-            const s = parseFloat(document.getElementById("s").value)/100;
-            // Perform the calculation (in this case, addition)
-            const calculation = s*num1/(s*num1+(1-s)*(1-num2));
-            const probability = (calculation*100).toFixed(2) + "%";
-            // Display the result
-            document.getElementById('result').innerText = "helt jävla perfekt";
-    }
-    </script>
-    
-    <div style="font-size:30; margin-bottom:70px; text-align: center;">
-    Tack för att du tittade in! Ha det gott!
-    </div>
-    <div style="margin-bottom:70px;">
-    </div>
-    
-    </body>
-    
+<style>
+
+body {
+        background-color: #1b1b1b; /* Set background to gray */
+        color: white;
+        font-size: 24px;
+        margin: 0;
+        padding: 0;
+        }
+
+        /* Style for left vertical line */
+
+.side-line {
+        position: fixed;
+        top: 0;               /* Start from the top of the page */
+        bottom: 0;            /* Extend to the bottom of the page */
+        width: 40px;          /* Line width */
+        background-color: #8447b6;
+        }
+
+.left-line {
+        left: 5;              /* Position on the left side */
+        }
+.right-line {
+        right: 5;             /* Position on the right side */
+        }
+
+</style>
+
+<!-- Left and Right Green Lines -->
+<div class="side-line left-line"></div>
+<div class="side-line right-line"></div>
+
+<body style="margin-left: 70px; margin-right: 70px;">
+
+<div style="font-size:36px; margin-top:30px;">
+        <a href="https://edvincambrand.github.io" target="_blank">
+                &#10087; </a>
+        <p style="text-align: center; font-size: 32px;"> 
+                &#9888; This website it under heavy construction. &#9888; </p>
+</div>
+
+<h2>Ange mätvärden för att beräkna din BMI</h2>
+
+<!-- Input fields for numbers -->
+<label for="num1">Ange din längd i cm:</label>
+<input type="number" id="num1" required><br><br>
+
+<label for="num2">Ange din vikt i kg:</label>
+<input type="number" id="num2" required><br><br>
+
+
+<!-- Button to trigger calculation -->
+<button onclick="calculate()">Klicka på mig!</button><br>
+
+<!-- Output display -->
+<p> Din BMI är: <span id="result">0</span></p>
+
+<script>
+function calculate() {
+        // Get the values from the input fields
+        const num1 = parseFloat(document.getElementById('num1').value)/100;
+        const num2 = parseFloat(document.getElementById('num2').value)/100;
+        const s = parseFloat(document.getElementById("s").value)/100;
+        // Perform the calculation (in this case, addition)
+        const calculation = s*num1/(s*num1+(1-s)*(1-num2));
+        const probability = (calculation*100).toFixed(2) + "%";
+        // Display the result
+        document.getElementById('result').innerText = "helt jävla perfekt";
+}
+</script>
+
+<div style="font-size:30; margin-bottom:70px; text-align: center;">
+Tack för att du tittade in! Ha det gott!
+</div>
+<div style="margin-bottom:70px;">
+</div>
+
+</body>
