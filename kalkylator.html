@@ -70,8 +70,18 @@ body {
 
 <script>
     function display() {
-            // Display the result
+        const num1 = parseFloat(document.getElementById('num1').value)/100;
+        const num2 = parseFloat(document.getElementById('num2').value);
+        
+        // Check if values are maryam's
+        if (num1 == 1.54 && num2 == 50) {
             document.getElementById('result').innerText = "helt jävla perfekt";
+        }
+        // Else return correct BMI
+        else {
+            document.getElementById('result').innerText = ((num2)/(num1)**2).toFixed(2);
+        }
+            
     }
 </script>
 
