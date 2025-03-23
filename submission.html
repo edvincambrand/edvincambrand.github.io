@@ -1,0 +1,78 @@
+
+<head> 
+    <title>
+            &#10086;BMI-kalkylator
+    </title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Edvins yttrandefrihet">
+    <script type="text/javascript" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    </head>
+    
+    <style>
+    
+    body {
+            background-color: #1b1b1b; /* Set background to gray */
+            color: white;
+            font-size: 24px;
+            margin: 0;
+            padding: 0;
+            }
+    
+            /* Style for left vertical line */
+    
+    .side-line {
+            position: fixed;
+            top: 0;               /* Start from the top of the page */
+            bottom: 0;            /* Extend to the bottom of the page */
+            width: 40px;          /* Line width */
+            background-color: #8447b6;
+            }
+    
+    .left-line {
+            left: 5;              /* Position on the left side */
+            }
+    .right-line {
+            right: 5;             /* Position on the right side */
+            }
+    
+    </style>
+    
+    <!-- Left and Right Green Lines -->
+    <div class="side-line left-line"></div>
+    <div class="side-line right-line"></div>
+    
+    <body style="margin-left: 70px; margin-right: 70px;">
+    
+    <div style="font-size:36px; margin-top:30px;">
+            <a href="https://edvincambrand.github.io">
+                    &#10087; </a>
+            <p style="text-align: center; font-size: 32px;"> 
+                    &#9888; This website it under heavy construction. &#9888; </p>
+    </div>
+    
+    <h2>Har du förslag på förbättring till mina sidor? Skriv gärna!</h2>
+    
+    <input type="text" id="userInput" placeholder="Enter something">
+    <button onclick="storeInput()">Skicka!</button>
+    
+    <p id="output"></p>
+    
+    <script>
+    function storeInput() {
+        let inputValue = document.getElementById("userInput").value; // Get input value
+        document.getElementById("output").innerText = "You entered: " + inputValue; // Display input
+        console.log(inputValue); // Store in a variable (optional)
+    }
+    </script>
+    
+    
+    <div style="font-size:30; margin-bottom:70px; text-align: center;">
+    Tack för att du tittade in! Ha det gott!
+    </div>
+    <div style="margin-bottom:70px;">
+    </div>
+    
+    </body>
+    
