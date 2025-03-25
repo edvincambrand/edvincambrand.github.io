@@ -54,7 +54,7 @@
     
     <h2>Har du förslag på förbättring till mina sidor? Skriv gärna!</h2>
     
-    <input type="text" id="userInput" placeholder="Enter something">
+    <input type="text" id="userInput" placeholder="Fyll i mig">
     <button onclick="storeInput()">Skicka!</button>
     
     <p id="output"></p>
@@ -62,7 +62,7 @@
     <script>
     function storeInput() {
         let inputValue = document.getElementById("userInput").value; // Get input value
-        document.getElementById("output").innerText = "You entered: " + inputValue; // Display input
+        document.getElementById("output").innerText = "Du har föreslagit: " + inputValue; // Display input
         console.log(inputValue); // Store in a variable (optional)
     }
     </script>
